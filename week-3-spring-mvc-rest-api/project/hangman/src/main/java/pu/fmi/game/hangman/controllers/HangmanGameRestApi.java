@@ -40,5 +40,9 @@ public class HangmanGameRestApi {
   public HangmanGame getGameById(@PathVariable Long id){
     return hangmanGameService.getGameById(id);
   }
+  @GetMapping
+  public List<HangmanGame> getAllGames() {
+    return hangmanGameService.getAllGames();
+  }
 
 }

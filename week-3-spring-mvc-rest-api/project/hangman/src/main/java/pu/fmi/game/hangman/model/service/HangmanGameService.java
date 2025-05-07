@@ -124,6 +124,9 @@ public class HangmanGameService {
     }
     return null;
   }
+  public List<HangmanGame> getAllGames() {
+    return storedGamesCollection;
+  }
 
   @PreDestroy
   public void destroy(){
