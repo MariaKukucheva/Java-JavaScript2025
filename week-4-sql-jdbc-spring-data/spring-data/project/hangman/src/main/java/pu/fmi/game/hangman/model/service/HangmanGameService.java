@@ -143,4 +143,9 @@ public class HangmanGameService implements GameService {
     return stringBuilder.toString();
   }
 
+
+  public List<HangmanGame> getTop10Games() {
+    return gameRepository.findTop10ByOrderByStartedOnDateDesc();
+  }
+
 }
