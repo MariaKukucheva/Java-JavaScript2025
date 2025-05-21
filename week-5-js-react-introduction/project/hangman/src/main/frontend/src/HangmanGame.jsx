@@ -22,12 +22,8 @@ function HangmanGame({ game, setGame }) {
       <h2>Player: {game.player.username}</h2>
       <h2>{game.currentWord}</h2>
       <h2>{game.status}</h2>
-      {/*
-        TODO: Добавете логика, която скрива клавиатурата,
-            ако играта вече е приключила. Така играчът няма да може
-            да прави нови опити в завършена игра.
-       */}
-      { 
+      {game.status !== "WON" && game.status !== "LOST" && 
+  
         bulgarianAlphabet.map((letter) => {
             return <button onClick={() => makeGuess(letter)}>{letter}</button>;
         })
